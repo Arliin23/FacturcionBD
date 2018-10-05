@@ -54,11 +54,11 @@ CREATE TABLE Condicion_Pago (
 ID_Condicion int Identity(60000, 1) primary key not null,
 Descripcion varchar(60) not null,
 Cantidad_dias int not null,
-Estado varchar (60) not null
-ID_Cliente int primary key not null,
-ID_Vendedor int primary key not null,
-FOREIGN KEY (ID_Cliente) REFERENCES Cliente(ID_Cliente),
-FOREIGN KEY (ID Vendedor) REFERENCES Vendedor(ID_Vendedor)
+Estado varchar (60) not null,
+ID_Cliente int  not null,
+ID_Vendedor int not null,
+FOREIGN KEY (ID_Cliente) REFERENCES Cliente (ID_Cliente),
+FOREIGN KEY (ID_Vendedor) REFERENCES Vendedor (ID_Vendedor)
 );
 
 
@@ -78,8 +78,9 @@ Precio_Unitario float not null
 );
 
 CREATE TABLE Articulo_Factura (
-ID_Articulo int primary key not null,
-ID_Factura int primary key not null,
+ID_Articulo int not null,
+ID_Factura int  not null,
+CONSTRAINT PK_Articulo_Factura Primary Key(ID_Articulo, ID_Factura),
 FOREIGN KEY (ID_Articulo) REFERENCES Articulo_Facturable(ID_Articulo),
 FOREIGN KEY (ID_Factura) REFERENCES Factura(ID_Factura)
 );
