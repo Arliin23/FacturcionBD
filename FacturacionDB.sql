@@ -85,3 +85,12 @@ CONSTRAINT PK_Articulo_Factura Primary Key(ID_Articulo, ID_Factura),
 FOREIGN KEY (ID_Articulo) REFERENCES Articulo_Facturable(ID_Articulo),
 FOREIGN KEY (ID_Factura) REFERENCES Factura(ID_Factura)
 );
+
+--Insertar valores de prueba
+insert into Cliente values ( 'Erick', '40209553250', 'Primera', 'Activo');
+
+insert into Vendedor values ('Pedro', '7', 'Activo');
+
+insert into Condicion_Pago values ('Hipoteca de casa', '30', 'Pago al contado');
+
+select * from Condicion_Pago
