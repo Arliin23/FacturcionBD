@@ -31,7 +31,7 @@ Descripcion varchar(400) not null,
 Costo_Unitario float not null,
 Precio_Unitario float not null,
 Estado varchar (60) not null
-CONSTRAINT CHK_Estado CHECK(Estado IN('Disponible', 'No Disponible'))
+CONSTRAINT CHK_EstadoArticulo CHECK(Estado IN('Disponible', 'No Disponible'))
 
 );
 
@@ -42,7 +42,7 @@ Cedula bigint not null,
 CONSTRAINT AK_Cedula UNIQUE(Cedula),
 Cuenta_Contable varchar(50),
 Estado varchar (60) not null 
-CONSTRAINT CHK_Estado CHECK(Estado IN('Activo', 'Dormido' ,'Baja'))
+CONSTRAINT CHK_EstadoCliente CHECK(Estado IN('Activo', 'Dormido' ,'Baja'))
 );
 
 CREATE TABLE Vendedor (
@@ -50,7 +50,7 @@ ID_Vendedor int Identity(40000, 1) primary key not null,
 Nombre varchar(50) not null,
 Porciento_Comision int not null,
 Estado varchar(60) not null
-CONSTRAINT CHK_Estado CHECK(Estado IN('Activo', 'Dormido' ,'Baja'))
+CONSTRAINT CHK_EstadoVendedor CHECK(Estado IN('Activo', 'Dormido' ,'Baja'))
 );
 
 
@@ -59,7 +59,7 @@ ID_Condicion int Identity(60000, 1) primary key not null,
 Descripcion varchar(400) not null,
 Cantidad_dias int not null,
 Estado varchar (60) not null,
-CONSTRAINT CHK_Estado CHECK(Estado IN('Pago al contado', 'Pago anticipado', 'Pago aplazado'))
+CONSTRAINT CHK_EstadoPago CHECK(Estado IN('Pago al contado', 'Pago anticipado', 'Pago aplazado'))
 
 );
 
