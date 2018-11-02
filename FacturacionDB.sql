@@ -38,7 +38,7 @@ CONSTRAINT CHK_EstadoArticulo CHECK(Estado IN('Disponible', 'No Disponible'))
 CREATE TABLE Cliente(
 ID_Cliente int Identity(50000, 1) primary key not null,
 Nombre_Comercial varchar(50) not null,
-Cedula bigint not null,
+Cedula bigint not null unique,
 CONSTRAINT AK_Cedula UNIQUE(Cedula),
 Cuenta_Contable varchar(50),
 Estado varchar (60) not null 
@@ -65,7 +65,7 @@ CONSTRAINT CHK_EstadoPago CHECK(Estado IN('Pago al contado', 'Pago anticipado', 
 
 
 CREATE TABLE Factura(
-ID_Factura int Identity(40000, 1) primary key not null,
+ID_Factura int Identity(70000, 1) primary key not null,
 Forma_Pago varchar(50) not null,
 ID_Vendedor int not null,
 CONSTRAINT FK_VendedorFactura FOREIGN KEY(ID_Vendedor) REFERENCES Vendedor(ID_Vendedor),
@@ -84,6 +84,14 @@ ID_Factura int  not null,
 CONSTRAINT PK_Articulo_Factura Primary Key(ID_Articulo, ID_Factura),
 FOREIGN KEY (ID_Articulo) REFERENCES Articulo_Facturable(ID_Articulo),
 FOREIGN KEY (ID_Factura) REFERENCES Factura(ID_Factura)
+);
+
+CREATE TABLE Usuario(
+Id_Usuario int Identity(80000, 1)  not null,
+Nombre_Usuario varchar(10) not null unique,
+Clave varchar(30) not null, 
+Estado varchar(50) not null, 
+CONSTRAINT CHK_EstadoUsuario CHECK(Estado IN('Activo', 'Vacaciones', 'Inactivo'))   
 );
 
 --Insertar valores de prueba
