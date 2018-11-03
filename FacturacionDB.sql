@@ -41,6 +41,7 @@ Nombre_Comercial varchar(50) not null,
 Cedula bigint not null unique,
 CONSTRAINT AK_Cedula UNIQUE(Cedula),
 Cuenta_Contable varchar(50),
+CONSTRAINT CHK_CuentaContableCliente CHECK(Cuenta_Contable IN('Debito', 'Credito')),
 Estado varchar (60) not null 
 CONSTRAINT CHK_EstadoCliente CHECK(Estado IN('Activo', 'Dormido' ,'Baja'))
 );
@@ -97,7 +98,7 @@ CONSTRAINT CHK_EstadoUsuario CHECK(Estado IN('Activo', 'Vacaciones', 'Inactivo')
 
 
 --Insertar valores de prueba
-insert into Cliente values ( 'Erick', '40209553250', 'Primera', 'Activo');
+insert into Cliente values ( 'Erick', '40209553250', 'Debito', 'Activo');
 
 insert into Vendedor values ('Pedro', '7', 'Activo');
 
