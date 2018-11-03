@@ -102,3 +102,12 @@ insert into Vendedor values ('Pedro', '7', 'Activo');
 insert into Condicion_Pago values ('Hipoteca de casa', '30', 'Pago al contado');
 
 select * from Condicion_Pago
+
+insert into Usuario values ('Arliin23', 'PIPOVIVE', 'Activo'),
+('Bass360', 'PIPOVIVE', 'Activo'),
+('Estef', 'PIPOVIVE', 'Activo')
+;
+
+update Usuario set Estado = 'Vacaciones' where id_usuario = 80001
+
+select * from Usuario
