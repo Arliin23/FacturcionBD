@@ -104,6 +104,8 @@ insert into Vendedor values ('Pedro', '7', 'Activo');
 
 insert into Condicion_Pago values ('Hipoteca de casa', '30', 'Pago al contado');
 
+insert into Usuario values('Admin', 'Pipo', 'Activo');
+
 select * from Condicion_Pago
 
 insert into Usuario values ('Arliin23', 'PIPOVIVE', 'Activo'),
