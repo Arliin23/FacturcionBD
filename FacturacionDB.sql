@@ -90,11 +90,10 @@ FOREIGN KEY (ID_Factura) REFERENCES Factura(ID_Factura)
 CREATE TABLE Usuario(
 Id_Usuario int Identity(80000, 1) Primary Key,
 Nombre_Usuario varchar(10) not null unique,
-Clave varchar(30) not null, 
+Clave varchar(32) not null, 
 Estado varchar(50) not null, 
 CONSTRAINT CHK_EstadoUsuario CHECK(Estado IN('Activo', 'Vacaciones', 'Inactivo'))   
 );
-
 
 
 --Insertar valores de prueba
