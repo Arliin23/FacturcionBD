@@ -30,6 +30,7 @@ ID_Articulo int Identity(40000, 1) primary key not null,
 Descripcion varchar(400) not null,
 Costo_Unitario float not null,
 Precio_Unitario float not null,
+Cantidad int not null,
 Estado varchar (60) not null
 CONSTRAINT CHK_EstadoArticulo CHECK(Estado IN('Disponible', 'No Disponible'))
 
