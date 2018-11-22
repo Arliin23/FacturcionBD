@@ -27,7 +27,7 @@ GO
 
 CREATE TABLE Articulo_Facturable(
 ID_Articulo int Identity(40000, 1) primary key not null,
-Descripcion varchar(400) not null,
+Nombre_Articulo varchar(40) not null,
 Costo_Unitario float not null,
 Precio_Unitario float not null,
 Cantidad int not null,
