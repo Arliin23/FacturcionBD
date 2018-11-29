@@ -113,6 +113,38 @@ insert into Usuario values ('Arliin23', 'PIPOVIVE', 'Activo'),
 ('Estef', 'PIPOVIVE', 'Activo')
 ;
 
+insert into Articulo_Facturable values ('Melon', 20, 50, 300, 'Disponible'),
+('Pimiento rojo', 5, 15, 200, 'Disponible'),
+('Pimiento verde', 5, 15, 200, 'Disponible'),
+('Pan Bimbo', 30, 60, 245, 'Disponible'),
+('Emparedado', 25, 50, 80, 'Disponible'),
+('Dulce de Leche', 15, 25, 150, 'Disponible'),
+('Salsa picante', 50, 80, 100, 'Disponible'),
+('Pechuga de pollo', 80, 150, 90, 'Disponible'),
+('Filete de pescado', 70, 130, 100, 'Disponible'),
+('Arroz Pimco', 80, 150, 250, 'Disponible'),
+('Platano maduro', 5, 18, 87, 'Disponible'),
+('Platano verde', 3, 15, 125, 'Disponible'),
+('Jugo de Naranja', 40, 85, 90, 'Disponible'),
+('Mantequilla de mani', 55, 100, 50, 'Disponible'),
+('Mayonesa', 40, 75, 300, 'Disponible'),
+('Pepinillos', 30, 70, 200, 'Disponible'),
+('Cebolla', 5, 15, 125, 'Disponible'),
+('Ron Brugal', 250, 600, 50, 'Disponible'),
+('Coca-Cola', 45, 60, 200, 'Disponible'),
+('Leche Rica', 40, 85, 65, 'Disponible'),
+('Cafe molido', 45, 80, 300, 'Disponible'),
+('Galletas wafer', 15, 45, 100, 'Disponible'),
+('Tostitos', 100, 185, 50, 'Disponible'),
+('Chocolate embajador', 2, 5, 100, 'Disponible'),
+('Pasta Princesa', 15, 35, 124, 'Disponible'),
+('Salsa de tomate', 25, 45, 120, 'Disponible'),
+('Desodorante AXE', 75, 125, 80, 'Disponible'),
+('Harina el negrito', 15, 35, 200, 'Disponible'),
+('Red Bull', 75, 125, 70, 'Disponible'),
+('Habichuelas rojas', 45, 80, 300, 'Disponible');
+
+
 update Usuario set Estado = 'Vacaciones' where id_usuario = 80001
 
 select * from Usuario
