@@ -109,7 +109,7 @@ insert into Usuario values('Admin', 'Pipo', 'Activo');
 select * from Condicion_Pago
 
 insert into Usuario values ('Arliin23', 'PIPOVIVE', 'Activo'),
-('Bass360', 'PIPOVIVE', 'Activo'),
+('Bass360', 'PIPOVIVE', 'Vacaciones'),
 ('Estef', 'PIPOVIVE', 'Activo')
 ;
 
@@ -145,6 +145,10 @@ insert into Articulo_Facturable values ('Melon', 20, 50, 300, 'Disponible'),
 ('Habichuelas rojas', 45, 80, 300, 'Disponible');
 
 
-update Usuario set Estado = 'Vacaciones' where id_usuario = 80001
+update Usuario set Clave = 'BCFF3BD90663E3D89D07700AF2C05A62' where id_usuario = 80001
+update Usuario set Clave = '80DB790085DB27F745B9B654CD70A240' where Id_Usuario = 80000
+update usuario set Clave = 'BCFF3BD90663E3D89D07700AF2C05A62' where Id_Usuario = 80002
+update usuario set Clave = 'BCFF3BD90663E3D89D07700AF2C05A62' where Id_Usuario = 80003
 
 select * from Usuario
+select * from Articulo_Facturable
